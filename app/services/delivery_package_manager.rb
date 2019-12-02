@@ -5,9 +5,26 @@ class DeliveryPackageManager
     
   def generate_overweight_data
     hydrated_packages = hydrate_real_parcel
-    hydrated_packages.each do |delivery_package|
-      puts delivery_package
+    package_instances = []
+    
+    hydrated_packages.each do |delivery_package_data|
+      instance = Domain::DeliveryPackage.new(
+        delivery_package_data[:tracking_number],
+        delivery_package_data[:carrier],
+        delivery_package_data[:parcel],
+        delivery_package_data[:real_parcel]
+      )
+      package_instances.push instance
     end
+
+    package_instances.each do |package_instance|
+      puts "Total Weight: #{package_instance.calculate_total_weight}"
+      puts "Real Total Weight #{package_instance.calculate_real_total_weight}"
+      puts "Over Weight "
+      puts "#{package_instance.get_overweight_data}"
+      puts ""
+    end
+
   end
 
   private
