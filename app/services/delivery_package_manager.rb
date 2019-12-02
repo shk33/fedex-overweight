@@ -25,6 +25,7 @@ class DeliveryPackageManager
         "label_weight":    overweight_data[:label_weight],
         "has_overweight":  overweight_data[:has_overweight],
         "real_weight":     overweight_data[:real_weight],
+        "exceeding_weight": overweight_data[:exceeding_weight],
       }
       overweights.push(info)
     end

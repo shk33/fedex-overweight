@@ -23,14 +23,14 @@ module Domain
           has_overweight: true,
           label_weight:  label_weight, 
           real_weight:   real_total_weight,
-          exceeding: (real_total_weight - label_weight).ceil
+          exceeding_weight: (real_total_weight - label_weight).ceil
         }
       else
         overweight_data = {
           has_overweight: false,
           label_weight:  label_weight,
           real_weight:   real_total_weight,
-          amount: 0
+          exceeding_weight: 0
         }
       end
 
