@@ -1,24 +1,7 @@
-# README
+# Fedex Overweight
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+If you need the master key file for reading configuration values
+create `config/master.key`
+```
+f4590fc8a791ef9ef5d04d55c7d9ef3d
+```
